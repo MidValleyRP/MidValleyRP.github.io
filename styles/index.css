@@ -13,7 +13,6 @@ body {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 html {
     overflow-x: hidden;
 }
@@ -162,7 +161,8 @@ nav ul {
 }
 
 .section-one-container img {
-    width: 50%;
+    height: auto;
+    max-width: 50%;
     border-radius: 5px;
 }
 
