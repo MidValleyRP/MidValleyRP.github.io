@@ -103,16 +103,30 @@ nav ul {
 }
 
 .play-btn {
-    background-color: transparent;
+    background-color: #111111 !important;
     text-align: center;
     padding: 10px;
-    border-radius: 10px;
-    border: solid 1px #e46b11;
+    border-radius: 10000px;
+    border: none;
     transition: .2s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .play-btn:hover {
-    color: #e46b11;
+    color: #fab05f;
+}
+
+.play-btn::after {
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 104%;
+    border-radius: 10000px;
+    background-image: linear-gradient(to bottom right, #fab05f, #a95112);
+    z-index: -1;
 }
 
 .hero-container h1 {
@@ -264,10 +278,17 @@ footer {
     justify-content: space-between;
 }
 
+@media (max-width: 505px) {
+    .play-btn { display: none; }
+}
+
+@media (max-width: 550px) {
+    .play-btn { min-width: 30%; }
+}
+
 @media (max-width: 660px) {
     .nav-links { display: none; }
-    .hero-container section a { max-width: 28%; }
-    .section-one-container section a { max-width: 31%; }
+    .play-btn { min-width: 25%; }
 }
 
 @media (max-width: 700px) {
